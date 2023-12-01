@@ -1,3 +1,3 @@
 # Credits
 
-The target is taken from https://github.com/mykter/afl-training
+The original target was taken from https://github.com/mykter/afl-training
