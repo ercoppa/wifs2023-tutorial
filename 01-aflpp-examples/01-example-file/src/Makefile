@@ -4,10 +4,10 @@ all:
 	echo "Run AFL++ in QEMU or LLVM mode using targets: run-llvm, run-qemu"
 
 run-llvm: build-llvm
-	afl-fuzz -i seeds/ -o out -- ./target @@
+	afl-fuzz -i seeds/ -o out -t 1000 -- ./target @@
 
 run-qemu: build-qemu
-	afl-fuzz -Q -i seeds/ -o out -- ./target @@
+	afl-fuzz -Q -i seeds/ -o out -t 1000 -- ./target @@
 
 clean:
 	@rm -f target

@@ -3,7 +3,7 @@ CFLAGS ?= -g -w
 all: run
 
 run: build
-	afl-fuzz -i seeds/ -o out -c ./target.cmplog -t 3000 -- ./target
+	afl-fuzz -i seeds/ -o out -c ./target.cmplog -t 1000 -- ./target
 
 clean:
 	@rm -f target
