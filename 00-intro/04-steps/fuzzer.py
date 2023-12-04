@@ -17,7 +17,7 @@ while True:
     mutation = random.randrange(0, 3)
     if mutation == 0: input[offset] = os.urandom(1)[0]
     elif mutation == 1: input[offset] += 1
-    elif mutation == 2: input = input[:offset] + os.urandom(random.randrange(1, 64))
+    elif mutation == 2: input = input[:offset] + os.urandom(random.randrange(1, 64 - offset))
 
     # step 3
     try: 
